@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package grpcgoexpress;
+
+option go_package = "github.com/go-service/grpcgoexpress;grpcgoexpress";
+
+// The greeting service definition.
+service GreetingService {
+  // Sends a greeting
+  rpc GetData (RequestMessage) returns (ResponseMessage);
+}
+
+// The request message containing the user's name.
+message RequestMessage {
+  string query = 1;
+}
+
+// The response message containing the greetings.
+message ResponseMessage {
+  string data = 1;
+}
